@@ -53,6 +53,7 @@ def delete_data(filename):
     print("")
     index_delete_data = int(input("Введите номер строки для удаления: ")) - 1
     tel_book_lines = tel_book.split("\n")
+    print(tel_book_lines)
     del_tel_book_lines = tel_book_lines[index_delete_data]
     tel_book_lines.pop(index_delete_data)
     print(f"Удалена запись: {del_tel_book_lines}\n")

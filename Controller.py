@@ -8,23 +8,19 @@ def main():
          
     while choice:
         action=View.user_input()      
-        if action == 1:
-            str=View.input_man()
-            Database.save_man_data(str)
-        elif action == 2:
-            show_data(file_tel)
-            #input_data(file_tel)
-        elif action == 3:
-            edit_data(file_tel)
-        elif action == 4:
-            delete_data(file_tel)
+        if action == 1:#Новый
+            str=View.input_man(file_tel)
+            Database.save_man_data(file_tel,str)
+        elif action == 2:# Вывод
+            Database.show_list(file_tel)
+        elif action == 3:# Изменить
+            View.edit_data(file_tel)
+        elif action == 4:# Удалить
+            del_str=View.delete_data(file_tel)
+            Database.del_string(file_tel,del_str)
         else:
             choice = False
-
-    print("До свидания")   
-  
-
-
-               
+    print("Работа окончена")   
+                 
             
 main()
