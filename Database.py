@@ -22,3 +22,13 @@ def del_string(filename,index_delete_data):
     print(f"Удалена запись: {del_tel_book_lines}\n")
     with open(filename, "w", encoding='utf-8') as data:
         data.write("\n".join(tel_book_lines))
+
+# Результат поиска    
+def find_result(filename,text):
+    print("\nПП | ФИО | Телефон")
+    with open(filename, "r", encoding="utf-8") as data:
+        text_strings=data.readlines()
+        for work_string in text_strings:
+            if text.upper() in work_string.upper():
+                print(work_string)
+    print("")

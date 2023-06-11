@@ -5,6 +5,7 @@ def user_input():
     print("2 - Отобразить список")
     print("3 - Изменить запись")
     print("4 - Удалить запись")
+    print("5 - Найти")
     print("0 - Выход из программы")
     ask = int(input("Действие: "))
     return ask
@@ -53,6 +54,11 @@ def delete_data(filename):
     print("")
     index_delete_data = int(input("Введите номер строки для удаления: ")) - 1
     return index_delete_data
+
+# вводит информацию для поиска
+def find_data(filename):
+    text_to_search=input("Образец для поиска: ")
+    return text_to_search
 
 
 

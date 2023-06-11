@@ -18,6 +18,9 @@ def main():
         elif action == 4:# Удалить
             del_str=View.delete_data(file_tel)
             Database.del_string(file_tel,del_str)
+        elif action == 5:# Найти
+            text_search=View.find_data(file_tel)
+            Database.find_result(file_tel,text_search)
         else:
             choice = False
     print("Работа окончена")   
